@@ -28,7 +28,7 @@ The -s option grants superuser privileges.
 Next we need to create a database for the user:
 
 ```bash
-postgres@debian:/root$ createdb -O username
+postgres@debian:/root$ createdb -O username username
 ```
 
 Now try to start psql as a normal user:
@@ -38,3 +38,19 @@ $ psql
 username=# \q
 ```
 
+## Create instagram user and database
+
+After setting up a user for the local system user, we no longer need to switch to the postgres account to run postgres commands.
+Add an instagram postgres user:
+
+```bash
+$ createuser -P
+```
+
+This creates an istagram user that is not allowed to create new databases or roles and is not superuser. The -P flag will display a password prompt to set a password for the user.
+
+To create the instagram database, run the follwing command:
+
+```bash
+$ createdb -O instagram instagram 
+```
