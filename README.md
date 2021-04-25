@@ -64,5 +64,7 @@ The name should be localhost, switch to the connection tab and enter the require
 
 ![Database Connection](screenshots/connection.jpg)
 
+## Create Tables
 
+Right-click in the instagram database in pgAdmin and select Query Tool from the context menu. Copy and paste the contents of table/table.sql into the Query Tool window and run it.
 
