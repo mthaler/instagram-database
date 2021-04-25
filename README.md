@@ -44,7 +44,7 @@ After setting up a user for the local system user, we no longer need to switch t
 Add an instagram postgres user:
 
 ```bash
-$ createuser -P
+$ createuser -P instagram
 ```
 
 This creates an istagram user that is not allowed to create new databases or roles and is not superuser. The -P flag will display a password prompt to set a password for the user.
