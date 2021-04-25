@@ -66,5 +66,29 @@ The name should be localhost, switch to the connection tab and enter the require
 
 ## Create Tables
 
-Right-click in the instagram database in pgAdmin and select Query Tool from the context menu. Copy and paste the contents of table/table.sql into the Query Tool window and run it.
+Right-click in the instagram database in pgAdmin and select *Query Tool* from the context menu. Copy and paste the contents of table/table.sql into the Query Tool window and run it.
 
+## Import data
+
+PostgreSQL does not allow to disable triggers for nomal users. To import the data from data/data.sql we temporarely have to grant the instagram role superuser rights.
+
+Start psql and execute the following command:
+
+```bash
+$ psql
+username=# ALTER USER instagram WITH SUPERUSER;
+```
+
+In pgAdmin right-click on the instagram database and select *Restore...* from the context meu.
+
+![Restore Dialog](screenshots/restore.jpg)
+
+Select the *Restore Options* tab and change *Only Data*, *Owner*, *Single Transaction* and *Trigger* to *Yes*. Then start the import by clicking on *Restore*. This needs some time.
+
+Next, remove the superuser role from the instagram user:
+
+
+```bash
+$ psql
+username=# ALTER USER instagram WITH NOSUPERUSER;
+```
