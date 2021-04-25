@@ -54,3 +54,15 @@ To create the instagram database, run the follwing command:
 ```bash
 $ createdb -O instagram instagram 
 ```
+## Install PGAdmin
+
+[pgAdmin](https://www.pgadmin.org/) is a popular feature-rich open source database administration tool for PostgreSQL. 
+Follow the instructions on the web site to install it.
+
+On Debian Linux, pgAdmin is installed in `/usr/pgadnmin4`. Start pgAdmin and create a new Server by right-clicking on Servers and selecting Create -> Server...
+The name should be localhost, switch to the connection tab and enter the required information:
+
+[Database Connection](screenshots/connection.jpg)
+
+
+
