@@ -35,6 +35,6 @@ Now try to start psql as a normal user:
 
 ```bash
 $ psql
-#username=# \q
+username=# \q
 ```
 
