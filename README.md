@@ -16,7 +16,7 @@ Both the default database user and default database are called postgres
 By default, Postgres uses a concept called “roles” to handle authentication and authorization.
 After installation Postgres is set up to use ident authentication, meaning that it associates Postgres roles with a matching Unix/Linux system account.
 
-Use su to swith to the postgres acount and create a user with the same name as the system user:
+Use su to switch to the postgres acount and create a user with the same name as the system user:
 
 ```
 $ su -
